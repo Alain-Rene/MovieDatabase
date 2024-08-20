@@ -1,0 +1,14 @@
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/bin/Debug/net8.0/MovieDatabase
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/bin/Debug/net8.0/MovieDatabase.deps.json
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/bin/Debug/net8.0/MovieDatabase.runtimeconfig.json
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/bin/Debug/net8.0/MovieDatabase.dll
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/bin/Debug/net8.0/MovieDatabase.pdb
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/MovieDatabase.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/MovieDatabase.AssemblyInfoInputs.cache
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/MovieDatabase.AssemblyInfo.cs
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/MovieDatabase.csproj.CoreCompileInputs.cache
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/MovieDatabase.dll
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/refint/MovieDatabase.dll
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/MovieDatabase.pdb
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/MovieDatabase.genruntimeconfig.cache
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/ref/MovieDatabase.dll

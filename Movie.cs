@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace MovieDatabase
 {
+    //Movie class
     public class Movie
     {
         //Parameters

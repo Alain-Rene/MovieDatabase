@@ -1,23 +1,24 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿/*
+Program that takes a list of movies and displays them by category. User can input
+any category to display the films that match said category.
+*/
 using MovieDatabase;
 
-Console.WriteLine("Hello, World!");
-
+//Movie list using parameters from Movie class
 List<Movie> movies = new List<Movie>()
 {
-    new Movie("The Dark Knight", "Action"),
-    new Movie("Pulp Fiction", "Drama"),
-    new Movie("The Godfather", "Drama"),
-    new Movie("The Matrix", "Action"),
-    new Movie("Toy Story" , "Family"),
-    new Movie("Forrest Gump", "Drama"),
-    new Movie("Spirited Away", "Fantasy"),
-    new Movie("The Lord of the Rings", "Fantasy"),
-    new Movie("The Lion King", "Family"),
-    new Movie("Mulan", "Family"),
-    new Movie ("Interstellar", "SciFi"),
-    new Movie("Star Wars", "SciFi")
-
+    new Movie("The Dark Knight", "Action", "2008", 152),
+    new Movie("Pulp Fiction", "Drama", "1994", 154),
+    new Movie("The Godfather", "Drama", "1972", 175),
+    new Movie("The Matrix", "Action", "1999", 136),
+    new Movie("Toy Story" , "Family", "1995", 81),
+    new Movie("Forrest Gump", "Drama", "1994", 142),
+    new Movie("Spirited Away", "Fantasy", "2001", 125),
+    new Movie("The Lord of the Rings", "Fantasy", "2001" , 178),
+    new Movie("The Lion King", "Family", "1998", 87),
+    new Movie("Mulan", "Family", "2014", 169),
+    new Movie ("Interstellar", "SciFi", "2014", 169),
+    new Movie("Star Wars", "SciFi", "1977", 121)
 };
 
 
@@ -29,32 +30,44 @@ System.Console.WriteLine("Welcome to the movie database!");
 //Distinct by category, will choose every single category
 List<String> availableGenres = movies.Select(m => m.Category).Distinct().ToList();
 
+//Keeps track of sorted movies for display
 List<Movie> sortedMovies = new List<Movie>();
 do
 {
     System.Console.WriteLine("Here are the genres of movies we have:");
+
+    //Displays a list of all the available categories that the user can choose from
     for (int i = 0; i < availableGenres.Count; i++)
     {
         System.Console.WriteLine($"{i + 1}. {availableGenres[i]}");
     }
 
     System.Console.WriteLine("Please choose a genre by number:");
-
+    
     userInput = int.Parse(Console.ReadLine());
-
-    string genreChoice = availableGenres[userInput - 1];
-    //.Any, sees if any are the same category
-    System.Console.WriteLine("This is the genre choice: " + genreChoice);
-
-    sortedMovies = movies.Where(m => m.Category == genreChoice)
-    .OrderBy(m => m.Title)
-    .ToList();
-
-    foreach (Movie m in sortedMovies)
+   
+    //Validate input
+    if (userInput >= 1 && userInput <= availableGenres.Count)
     {
-        System.Console.WriteLine(m.Title);
+        string genreChoice = availableGenres[userInput - 1];
+
+        //Use linq to sort the movies
+        sortedMovies = movies.Where(m => m.Category == genreChoice)
+        .OrderBy(m => m.Title)
+        .ToList();
+
+        //Output the movie title, release year and runtime from the sorted list
+        foreach (Movie m in sortedMovies)
+        {
+            System.Console.WriteLine($"{m.Title}, {m.YearReleased}, {m.RunTime} minutes");
+        }
+        runProgram = QuestionUser(runProgram);
     }
-    runProgram = QuestionUser(runProgram);
+    else
+    {
+        System.Console.WriteLine($"Invalid input, please enter a number from 1 to {availableGenres.Count}");
+    }
+    
 
 } while (runProgram);
 

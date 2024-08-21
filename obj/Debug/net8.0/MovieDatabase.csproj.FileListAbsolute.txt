@@ -12,3 +12,4 @@
 /Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/MovieDatabase.pdb
 /Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/MovieDatabase.genruntimeconfig.cache
 /Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/ref/MovieDatabase.dll
+/Users/alainrene/Desktop/AugustWeek3/MovieDatabase/obj/Debug/net8.0/MovieDatabase.sourcelink.json
